@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <style>
-         body {
+</head>
+<style>
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -65,9 +66,7 @@
         li {
             color: red;
         }
-    </style>
-    <title>Document</title>
-</head>
+</style>
     <h1>Hello cruel world Edit</h1>
     <div>
         @if($errors->any())

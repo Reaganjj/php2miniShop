@@ -13,7 +13,8 @@ class ProductController extends Controller
     }
 
     public function create() {
-        return view('product.create');
+        $products = Product::all();
+        return view('product.create', ['products' => $products]);
     }
 
     public function store(Request $request) {
@@ -47,6 +48,6 @@ class ProductController extends Controller
 
     public function destroy(Product $product) {
         $product->delete();
-        return redirect(route('product.index'))->with('succexx', 'Product Deleted Successfully Updated!');
+        return redirect(route('product.index'))->with('success', 'Product Deleted Successfully Updated!');
     }
 }
