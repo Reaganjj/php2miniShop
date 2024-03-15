@@ -71,13 +71,13 @@
     transition: 0.3s;
   }
   .btn-1::before {
-  background-color: #fe7d31;
+  background-color: #474747;
   transition: 0.3s ease-out;
 }
 .btn-1 span a {
     text-decoration: none;
   color: rgb(255,255,255);
-  border: 1px solid #fe7d31;
+  border: 1px solid #474747;
   transition: 0.2s 0.1s;
 }
 .btn-1 span a:hover {
@@ -109,11 +109,11 @@ ul {
         li {
           float: left;
         }
-        li h1 {
+        li h2 {
           display: flex;
           color: white;
           text-align: center;
-          padding: 20px 20px;
+          padding: 15px 20px;
           text-decoration: none;
         }
         .sapatosh {
@@ -131,21 +131,43 @@ ul {
         li a:hover {
           background-color: #6a6a6a;
         }
+        .shoesland {
+          height: 55%;
+        }
+        .shopnow {
+          padding-top: 23%;
+        }
+        .textland {
+          font-style: italic;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          font-size: 45px;
+          padding-top: 29%;
+          color:#ffffff;
+        }
+        .textland2 {
+          padding-top: 12%;
+          color:#ffffff;
+        }
         </style>
 </head>
 <body>
-    <div class="box">
-        <nav class="navigo">
-            <ul class="nav-list">
-                <img class="sapatosh" src="https://i.im.ge/2024/03/15/RjQeBD.sapatosh.png" />
-                <li class="nav-item"><h1>SOLE SOCIETY</h1></li>
-            </ul>
-            <div class="d-flex justify-content-end">
-                <button class="btn btn-1 hover-filled-opacity">
-                    <span><a href="/product">SHOP NOW</span>
-                  </button>
-                </div>
-        </nav>
+  <div class="box">
+    <nav class="navigo">
+        <ul class="nav-list">
+            <img class="sapatosh" src="https://i.im.ge/2024/03/15/RjQeBD.sapatosh.png" />
+            <li class="nav-item"><h2>SOLE SOCIETY</h2></li>
+        </ul>
+    </nav>
+    <h2 class="position-absolute top-0 start-50 translate-middle textland">"Express Yourself from Sole to Sow"</h2>
+    <img class="position-absolute top-50 start-50 translate-middle shoesland" src="https://i.im.ge/2024/03/15/RjTH7W.SHOES-LANDING-PAGE.webp">
+    <h3 class="position-absolute top-50 start-50 translate-middle textland2">--Best Quality Shoes--</h3>
+    <div class="position-absolute top-50 start-50 translate-middle shopnow">
+      <button class="btn btn-1 hover-filled-opacity">
+          <span><a href="/product">SHOP NOW</span>
+        </button>
+      </div>
+</div>
+
 
     </div>
 </body>
