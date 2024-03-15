@@ -7,8 +7,44 @@
     <title>Document</title>
 </head>
 <style>
-     <style>
-        body {
+  /* CSS for Add New Product button */
+.add-product-button {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Add padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it inline */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Add cursor pointer */
+}
+
+/* Hover effect */
+.add-product-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+.n-success {
+      
+      margin: 25px;
+      width: 20%;
+      padding: 12px 37px 12px 12px;
+      color: #333;
+      border-radius: 2px;
+      background: #fff;
+      position: center;
+      font-weight: bold;
+    font-family:'cairo',serif;
+    text-align: center;
+        box-sizing: border-box;
+    }
+        
+          .n-success {
+      border: 2px solid #32a846;
+      color: #32a846;
+    }
+    body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -68,28 +104,26 @@
             color: red;
         } 
 </style>
-</style>
 <body>
-    <h1>Hello cruel world Created</h1>
     <div>
-        @if($errors->any())
-        <ul>
-            @foreach($errors->all() as $error)
-                <li>{{$error}}</li>
-                @endforeach
-        </ul>
-        @endif
+      @if(session()->has('success'))
+      <div class="n-success">
+        {{session('success')}}
+      </div>
+      @endif
     </div>
-    <form method="post" action="{{route('product.store')}}">
+    <br />
+    <div>
+      <form method="post" action="{{route('product.store')}}">
         @csrf
         @method('post')
     <div>
         <label>Product Name: </label>
-        <input type="text" name="productname">
+        <input type="text" name="productname" >
     </div>
     <div>
         <label>Quantity: </label>
-        <input type="number" step="1" name="quantity">
+        <input type="number" step="1" name="quantity" >
     </div>
     <div>
         <label>Price: </label>
@@ -100,8 +134,9 @@
         <input type="text" name="description">
     </div>
     <div>
-        <input type="submit" value="Save New Product" />
+        <input type="submit" class="add-product-button" value="Confirm" />
     </div>
     </form>
+    </div>
 </body>
 </html>
