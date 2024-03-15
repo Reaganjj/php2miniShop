@@ -6,11 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style>
-      
-      table {
-        text-align: center;
-      }
-      .n-succexx {
+      /* CSS for Add New Product button */
+.add-product-button {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Add padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it inline */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Add cursor pointer */
+}
+
+/* Hover effect */
+.add-product-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+.n-success {
       
       margin: 25px;
       width: 20%;
@@ -24,68 +38,15 @@
     text-align: center;
         box-sizing: border-box;
     }
-    .n-succexx {
-	border: 2px solid #febf01;
-	color: #febf01;
-}
-      .n-success {
-      
-	margin: 25px;
-  width: 20%;
-	padding: 12px 37px 12px 12px;
-	color: #333;
-	border-radius: 2px;
-	background: #fff;
-	position: center;
-	font-weight: bold;
-font-family:'cairo',serif;
-text-align: center;
-    box-sizing: border-box;
-}
-    
-      .n-success {
-	border: 2px solid #32a846;
-	color: #32a846;
-}
-        ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          overflow: hidden;
-          background-color: #333;
-        }
         
-        li {
-          float: left;
-        }
-        
-        li a {
-          display: block;
-          color: white;
-          text-align: center;
-          padding: 14px 16px;
-          text-decoration: none;
-        }
-        
-        li a:hover {
-          background-color: #646464;
-        }
-        th, td {
-          padding: 5px;
-        }
+          .n-success {
+      border: 2px solid #32a846;
+      color: #32a846;
+    }
         </style>
     <title>Product list</title>
 </head>
 <body>
-    <div>
-        <nav>
-            <ul class="nav-list">
-                <li class="nav-item"><a href="/">Welcome</a></li>
-                <li class="nav-item"><a href="/product">Product</a></li>
-                <li class="nav-item"><a href="/product/create">Create</a></li>
-            </ul>
-        </nav>
-    </div>
     <div>
       @if(session()->has('success'))
       <div class="n-success">
