@@ -170,7 +170,7 @@ padding-right: 40px;
     </div>
     <div class="formpaddy">
         <label>Description: </label>
-        <input type="text" name="description">
+        <textarea name="description"  cols="50" rows="10"></textarea>
     </div>
     </form>
     </div>
