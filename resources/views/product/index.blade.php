@@ -7,43 +7,52 @@
     <title>Document</title>
 </head>
 <style>
-  /* CSS for Add New Product button */
-.add-product-button {
-    background-color: #4CAF50; /* Green background color */
-    color: white; /* Text color */
-    padding: 10px 20px; /* Add padding */
-    text-align: center; /* Center text */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Make it inline */
-    font-size: 16px; /* Font size */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Add cursor pointer */
+  /* Basic styles */
+body {
+  font-family: sans-serif; /* Change this to your preferred font family */
+  margin: 20px;
 }
 
-/* Hover effect */
-.add-product-button:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
+/* Success message styling */
 .n-success {
-      
-      margin: 25px;
-      width: 20%;
-      padding: 12px 37px 12px 12px;
-      color: #333;
-      border-radius: 2px;
-      background: #fff;
-      position: center;
-      font-weight: bold;
-    font-family:'cairo',serif;
-    text-align: center;
-        box-sizing: border-box;
-    }
-        
-          .n-success {
-      border: 2px solid #32a846;
-      color: #32a846;
-    }
+  background-color: lightgreen;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Product table styling */
+table {
+  border-collapse: collapse; /* Remove borders between table cells */
+  width: 100%; /* Make table full width */
+}
+
+th, td {
+  padding: 10px; /* Add padding to table cells */
+  border: 1px solid #ddd; /* Add a thin border to table cells */
+  text-align: left; /* Align table content to the left */
+}
+
+th {
+  background-color: #f2f2f2; /* Light gray background for table headers */
+}
+
+/* Add product button styling */
+.add-product-button {
+  display: block; /* Make button display on a new line */
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none; /* Remove underline */
+  cursor: pointer; /* Change cursor to indicate clickability */
+}
+
+.add-product-button:hover {
+  background-color: #3e8e41; /* Darker green on hover */
+}
+
 </style>
 <body>
     <div>
