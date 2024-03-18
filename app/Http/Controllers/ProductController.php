@@ -14,7 +14,7 @@ class ProductController extends Controller
 
     public function create() {
         $products = Product::all();
-        return view('product.create', ['products' => $products]);
+        return view('product.create', []);
     }
 
     public function store(Request $request) {
