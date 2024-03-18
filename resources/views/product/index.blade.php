@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>PRODUCT LIST</title>
 </head>
 <style>
   img {
@@ -107,11 +107,6 @@
     box-sizing: border-box;
   }
 
-  .n-success {
-    border: 2px solid #32a846;
-    color: #32a846;
-  }
-
   .container {
     max-width: 1200px;
     margin: 20px auto;
@@ -146,21 +141,28 @@
   .nextpagebutton {
     margin-left: 90%;
   }
+  .addprod {
+    position: fixed;
+    right: 0;
+    height: 70px;
+    width: 70px;
+    padding-right: 10px;
+  }
 </style>
 
 <body>
   <div class="box">
     <div>
       @if(session()->has('success'))
-      <div class="n-success">
-        {{session('success')}}
-      </div>
+      <script>
+        alert("<?php echo session('success'); ?>");
+     </script>
       @endif
     </div>
     <br />
     <div>
       <div>
-        <a href="{{route('product.create')}}" class="add-product-button">Add New Product</a>
+        <a href="{{route('product.create')}}"><img class="addprod" src="https://i.im.ge/2024/03/18/RC2WaY.add-da-product.png" /></a>
       </div>
       <div class="container">
         @foreach($products as $product)
