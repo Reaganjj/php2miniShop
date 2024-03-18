@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>ADDING A PRODUCT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <style>
   /* CSS for Add New Product button */
@@ -20,8 +21,6 @@
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Add cursor pointer */
 }
-
-/* Hover effect */
 .add-product-button:hover {
     background-color: #45a049; /* Darker green on hover */
 }
@@ -44,65 +43,98 @@
       border: 2px solid #32a846;
       color: #32a846;
     }
-    body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-
-        h1 {
+body {
+  background-image: url('https://i.im.ge/2024/03/15/R9eAXm.BG-IMAGE.webp');
+  height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+    
+}
+.box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 400px;
+	padding: 0px 0px 40px;
+	background: rgba(0, 0, 0, 0.479);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.5);
+    height: 85%;
+    width: 95%;
+    border: 3px solid #ffffff;
+}
+h1 {
             text-align: center;
-            color: #333;
+            margin-top: 20px;
+            color: #007bff;
         }
 
-        form {
-            max-width: 400px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
 
-        label {
+label {
             display: block;
             margin-bottom: 5px;
-            color: #333;
+            color:rgba(255, 255, 255, 0.479);
+            font-size: 20px;
         }
 
-        input[type="text"],
-        input[type="number"] {
-            width: 100%;
+input[type="text"],
+input[type="number"],
+textarea {
+            width: 40%;
             padding: 8px;
             margin-bottom: 10px;
             border: 1px solid #ccc;
+            background-color: #00000081;
             border-radius: 4px;
             box-sizing: border-box;
+            color:#ffffff;
+            height: 50px;
+        }
+        textarea {
+            height: 100px;
         }
 
-        input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
 
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
+ul {
+          list-style-type: none;
+          display: flex;
+          margin: 0;
+          padding: 0;
+          height: 40%;
+          overflow: hidden;
+          background-color: #00000081;
         }
-
+        
         li {
-            color: red;
-        } 
+          float: left;
+        }
+        li h1 {
+          display: flex;
+          color: white;
+          text-align: center;
+          padding-left: 50px;
+          padding-bottom: 10px;
+          text-decoration: none;
+          font-size: 30px;
+        }
+        .prtbtn {
+            border: none;
+background: transparent;
+cursor: pointer;
+padding-right: 40px;
+            padding-top: 30px;
+        }
+        .formpaddy {
+            padding-left: 30px;
+        }
 </style>
 <body>
     <div>
@@ -112,29 +144,33 @@
       </div>
       @endif
     </div>
-    <br />
     <div>
-      <form method="post" action="{{route('product.store')}}">
+      <form class="box" method="post" action="{{route('product.store')}}">
         @csrf
         @method('post')
-    <div>
+        <nav class="navigo">
+            <ul class="nav-list">
+                <li class="nav-item"><h1>ADD A PRODUCT</h1></li>       
+            </ul>
+            <div class="d-flex flex-row-reverse">
+                <button class="prtbtn" type="submit"><img src="https://i.im.ge/2024/03/15/Rjxv4F.adprod-1.png" /></button>
+            </div>
+        </nav>
+    <div class="formpaddy">
         <label>Product Name: </label>
         <input type="text" name="productname" >
     </div>
-    <div>
+    <div class="formpaddy">
         <label>Quantity: </label>
         <input type="number" step="1" name="quantity" >
     </div>
-    <div>
+    <div class="formpaddy">
         <label>Price: </label>
         <input type="number" name="productprice">
     </div>
-    <div>
+    <div class="formpaddy">
         <label>Description: </label>
         <input type="text" name="description">
-    </div>
-    <div>
-        <input type="submit" class="add-product-button" value="Confirm" />
     </div>
     </form>
     </div>
